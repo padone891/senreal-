@@ -1,0 +1,184 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    background-color: #121212; /* สีพื้นหลัง Dark Mode */
+    color: #ffffff; /* สีตัวอักษรหลัก */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px; /* จำกัดความกว้างให้ดูเหมือนในรูป */
+}
+
+h1 {
+    text-align: center;
+    color: #bdbdbd;
+    margin-bottom: 30px;
+}
+
+/* --- แถบค้นหา --- */
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* เพิ่ม padding ซ้ายสำหรับไอคอน */
+    border: none;
+    border-radius: 25px;
+    background-color: #212121; /* สีพื้นหลัง input */
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* --- รายการข้อมูล (List Items) --- */
+.profile-item {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e; /* สีพื้นหลังรายการ */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #424242; /* สีพื้นหลังรูปโปรไฟล์ */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details .name {
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.profile-details .link {
+    margin: 3px 0 0;
+    font-size: 12px;
+    color: #9e9e9e;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.tag.theboss {
+    background-color: #fdd835; /* สีเหลือง */
+    color: #000000;
+}
+
+.tag.leader {
+    background-color: #4caf50; /* สีเขียว */
+    color: #ffffff;
+}
+
+/* --- ไอคอน Facebook --- */
+.facebook-icon {
+    color: #bdbdbd;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.facebook-icon:hover {
+    color: #1877f2; /* สีฟ้า Facebook เมื่อ hover */
+}
+/* ... โค้ดที่มีอยู่ ... */
+
+.profile-details .name {
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex; /* ทำให้ชื่อและแท็กอยู่ในบรรทัดเดียวกัน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+}
+
+/* ปรับปรุง tag */
+.tag {
+    display: inline-flex; /* ใช้ flexbox เพื่อจัดวางไอคอนและข้อความ */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 5px; /* เว้นระยะห่างจากชื่อ */
+    text-transform: uppercase;
+    line-height: 1; /* ช่วยให้จัดบรรทัดได้ดีขึ้น */
+}
+
+.tag i.fas.fa-crown {
+    margin-right: 4px; /* เว้นระยะห่างระหว่างมงกุฎกับข้อความ */
+    font-size: 10px; /* ขนาดไอคอน */
+}
+
+.tag.theboss {
+    background-color: #fdd835; /* สีเหลือง */
+    color: #000000;
+}
+
+.tag.leader {
+    background-color: #4caf50; /* สีเขียว */
+    color: #ffffff;
+}
+
+.tag.vip {
+    background-color: #9c27b0; /* สีม่วง (หรือสีอื่นที่คุณต้องการสำหรับ VIP) */
+    color: #ffffff;
+}
+/* กำหนดรูปแบบของกรอบ Avatar */
+.profile-avatar {
+    width: 60px; /* ขนาดวงกลม */
+    height: 60px; /* ต้องเท่ากับ width */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    overflow: hidden; /* สำคัญ: ซ่อนส่วนเกินของรูปภาพ */
+    flex-shrink: 0; 
+    margin-right: 15px; 
+    /* ลบคุณสมบัติที่เกี่ยวกับการจัดวางข้อความ DRB ทิ้งไป */
+}
+
+/* กำหนดรูปแบบของแท็ก IMG ภายใน Avatar */
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    /* ปรับให้รูปภาพเต็มกรอบโดยไม่เสียสัดส่วน */
+    object-fit: cover; 
+}
